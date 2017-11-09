@@ -23,7 +23,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\drHub\" />
+    <Folder Include="wwwroot\styles\css\" />
+    <Folder Include="wwwroot\styles\libraries\fonts\" />
   </ItemGroup>
 
 </Project>

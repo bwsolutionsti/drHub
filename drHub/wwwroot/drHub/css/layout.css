@@ -621,6 +621,10 @@ ul.slimmenu.collapsed li > ul {
 	padding-top:120px;
 	padding-bottom:120px;
 }
+.padding-top-bottom2 {
+    padding-top: 40px;
+    padding-bottom: 120px;
+}
 .padding-top{
 	padding-top:120px;
 }
