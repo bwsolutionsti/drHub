@@ -1,72 +1,145 @@
 ﻿<!DOCTYPE html>
-<html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]>
+<!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - drHub</title>
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Doctor Hub</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <environment include="Development">
-        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-        <link rel="stylesheet" href="~/css/site.css" />
-    </environment>
-    <environment exclude="Development">
-        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
-              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
-              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
-        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
-    </environment>
+
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="~/drHub/css/base.css" />
+    <link rel="stylesheet" href="~/drHub/css/skeleton.css" />
+    <link rel="stylesheet" href="~/drHub/css/layout.css" />
+    <link rel="stylesheet" href="~/drHub/css/color.css" />
+    <link rel="stylesheet" href="~/drHub/css/font-awesome.css" />
+    <link rel="stylesheet" href="~/drHub/css/et-line.css" />
+    <link rel="stylesheet" href="~/drHub/css/owl.carousel.css" />
+    <link rel="stylesheet" href="~/drHub/css/owl.transitions.css" />
+    <link rel="stylesheet" href="~/drHub/css/retina.css" />
+
+
+    <!-- Favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="~/drHub/favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
+
+    <script type="text/javascript" src="~/drHub/js/modernizr.custom.js"></script>
+
+
 </head>
-<body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+<body class="royal_preloader">
+
+    <div id="royal_preloader"></div>
+
+    <!-- MENU
+    ================================================== -->
+    <nav id="menu-wrap" class="menu-back cbp-af-header">
         <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">drHub</a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+            <div class="twelve columns">
+                <div class="logo"><h6>Doctor Hub</h6></div>
+                <ul class="slimmenu">
+                    <li>
+                        <a href="#home">intro</a>
+                    </li>
+                    <li>
+                        <a href="#about">acerca de</a>
+                    </li>
+                    <li>
+                        <a href="#services">cuidamos</a>
+                    </li>                    
+                    <li>
+                        <a href="#contact">hola</a>
+                    </li>
+                    <li>
+                        <a asp-action="Register" asp-controller="Account">Regístrate</a>
+                    </li>
+                    <li>
+                        <a asp-action="Login" asp-controller="Account">Iniciar</a>
+                    </li>
                 </ul>
-                @await Html.PartialAsync("_LoginPartial")
             </div>
         </div>
     </nav>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; 2017 - drHub</p>
-        </footer>
+    @RenderBody()
+   
+    <div class="section back-dark padding-top-bottom overflow-hidden">
+        <div class="container">
+            <div class="six columns" data-scroll-reveal="enter bottom move 100px over 1s after 0.4s">
+                <div class="footer-top">
+                    <span style="color:white">Doctor Hub</span> 
+                </div>
+            </div>
+            <div class="six columns" data-scroll-reveal="enter bottom move 100px over 1s after 0.4s">
+                <div class="footer-top">
+                    <div class="social-footer">
+                        <ul class="list-social-footer">
+                            <li class="icon-footer tipped" data-title="twitter" data-tipper-options='{"direction":"top","follow":"true"}'>
+                                <a href="#">&#xf099;</a>
+                            </li>
+                            <li class="icon-footer tipped" data-title="github" data-tipper-options='{"direction":"top","follow":"true"}'>
+                                <a href="#">&#xf09b;</a>
+                            </li>
+                            <li class="icon-footer tipped" data-title="pinterest" data-tipper-options='{"direction":"top","follow":"true"}'>
+                                <a href="#">&#xf231;</a>
+                            </li>
+                            <li class="icon-footer tipped" data-title="facebook" data-tipper-options='{"direction":"top","follow":"true"}'>
+                                <a href="#">&#xf09a;</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="twelve columns remove-top remove-bottom" data-scroll-reveal="enter bottom move 100px over 1s after 0.4s">
+                <div class="footer-line"></div>
+            </div>
+            <div class="five columns" data-scroll-reveal="enter bottom move 100px over 1s after 0.4s">
+                <div class="left-footer">
+                    <p>2017 © <a style="color:white;" href="http://bwsolutions.mx">BWS</a>. Derechos Reservados.</p>
+                </div>
+            </div>
+            <div class="two columns" data-scroll-reveal="enter bottom move 100px over 1s after 0.4s">
+                <a href="#home" data-gal="m_PageScroll2id"><div class="arrow-up-footer"></div></a>
+            </div>
+            <div class="five columns" data-scroll-reveal="enter bottom move 100px over 1s after 0.4s">
+                <div class="right-footer">
+                    <a style="color:white;" asp-action="Terminos" asp-controller="Home">Términos y Condiciones</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a style="color:white;" asp-action="Privacidad" asp-controller="Home">Aviso de Privacidad</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a style="color:white;" asp-action="Index" asp-controller="Blog">Blog</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </div>
+            </div>
+        </div>
     </div>
 
-    <environment include="Development">
-        <script src="~/lib/jquery/dist/jquery.js"></script>
-        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
-        <script src="~/js/site.js" asp-append-version="true"></script>
-    </environment>
-    <environment exclude="Development">
-        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
-                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
-                asp-fallback-test="window.jQuery"
-                crossorigin="anonymous"
-                integrity="sha384-K+ctZQ+LL8q6tP7I94W+qzQsfRV2a+AfHIi9k8z8l9ggpc8X+Ytst4yBo/hH+8Fk">
-        </script>
-        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
-                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
-                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
-                crossorigin="anonymous"
-                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
-        </script>
-        <script src="~/js/site.min.js" asp-append-version="true"></script>
-    </environment>
-
     @RenderSection("Scripts", required: false)
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    <script type="text/javascript" src="~/drHub/js/jquery-2.1.1.js"></script>
+    <script type="text/javascript" src="~/drHub/js/royal_preloader.min.js"></script>
+    <script type="text/javascript" src="~/drHub/js/plugins.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvpnlHRidMIU374bKM5-sx8ruc01OvDjI"></script>
+    <!-- ==================
+        Go to this link to activated your google map API KEY https://developers.google.com/maps/documentation/javascript/tutorial#api_key
+        your key replace in script link for google map after .../maps/api/js?key=HERE_YOUR_API_KEY
+        coordinates for map you can change in custom.js file
+    ================== -->
+    <script type="text/javascript" src="~/drHub/js/contact.js"></script>
+    <script type="text/javascript" src="~/drHub/js/custom.js"></script>
+    <!-- End Document
+    ================================================== -->
 </body>
 </html>
